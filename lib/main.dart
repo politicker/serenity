@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:serenity/pages/habits_page.dart';
 import 'package:serenity/pages/login_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'components/bottom_navigation.dart';
 import 'constants.dart';
 
 Future<void> main() async {
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (_) => const HabitsPage(),
+        '/': (_) => const BottomNavigation(),
         '/login': (_) => const LoginPage(),
       },
     );
