@@ -26,7 +26,7 @@ class _LoginPageState extends State<LoginPage> {
       await supabase.auth.signInWithOtp(
         email: _emailController.text,
         emailRedirectTo:
-            kIsWeb ? null : 'io.supabase.flutterquickstart://login-callback/',
+            kIsWeb ? null : 'io.supabase.serenity://login-callback/',
       );
       if (mounted) {
         context.showSnackBar(message: 'Check your email for login link!');
