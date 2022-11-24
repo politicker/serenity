@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:serenity/pages/habits_page.dart';
 import 'package:serenity/pages/login_page.dart';
-import 'package:serenity/pages/splash_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'constants.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: <String, WidgetBuilder>{
-        '/': (_) => const SplashPage(),
+        '/': (_) => const HabitsPage(),
         '/login': (_) => const LoginPage(),
       },
     );
