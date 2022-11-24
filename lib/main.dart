@@ -3,11 +3,12 @@ import 'package:serenity/pages/login_page.dart';
 import 'package:serenity/pages/splash_page.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'constants.dart';
+
 Future<void> main() async {
   await Supabase.initialize(
-    // TODO: Replace credentials with your own
-    url: 'YOUR_SUPABASE_URL',
-    anonKey: 'YOUR_SUPABASE_ANON_KEY',
+    url: Config.supabaseURL,
+    anonKey: Config.supabaseAnonKey,
   );
   runApp(MyApp());
 }

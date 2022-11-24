@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+abstract class Config {
+  static const String supabaseURL =
+      String.fromEnvironment('SUPABASE_URL', defaultValue: '');
+
+  static const String supabaseAnonKey =
+      String.fromEnvironment('SUPABASE_ANON_KEY', defaultValue: '');
+}
+
 final supabase = Supabase.instance.client;
 
 extension ShowSnackBar on BuildContext {
